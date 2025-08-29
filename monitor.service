@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor process test
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/vishy/pythontest/venv/apimonitor/scriptbash.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
